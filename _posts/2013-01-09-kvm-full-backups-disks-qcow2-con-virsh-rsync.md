@@ -15,7 +15,7 @@ En el ejemplo vemos una infraestructura de 3 servidores (Ardenas, Siracusa, Zama
 
 <!-- more -->
 
-![](/public/img/bkpserver.png)
+![](/public/img/bkpserver.png){: .img-center .responsive-image }
 
 BKPServer es un servidor dedicado exclusivamente a tareas de backups el cual tiene (vamos a suponer) un partición con espacio suficiente para alojar todos los archivos de los discos virtuales que existen en Ardenas, Siracusa & Zama. El objetivo obviamente es disponer de un backup full de todas las VMs una vez a la semana y hacerlo de forma centralizada.
 Para ello BKPServer debe conectarse a cada uno de los servidores, suspender las VMs , transferir desde los servidores a BKPServer los archivos *.img, conectarse a los servidores y hacer un virsh resume a las VMs.
@@ -50,7 +50,7 @@ También pueden editar el archivo /etc/ssh/sshd_config y cambiar a “no” la o
 
 {% gist a13efb3afac89e0ebbb4 %}
 
-![](/public/img/virsh_list.png)
+![](/public/img/virsh_list.png){: .img-center .responsive-image }
 
 ## /usr/local/bin/virsh-snapshot.sh
 

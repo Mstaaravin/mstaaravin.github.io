@@ -33,8 +33,7 @@ Bueno, veamos.
 Sólo una pequeña introducción a los headers que pueden leerla en wikipedia: [http://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol](http://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 Otro link/imagen interesante que explica qué sucede cada vez que hacemos una petición http a un webserver es el siguiente:
 
-![http headers]({{ site.eurl }}/public/img/6dwzl1.jpg)
-
+  ![http headers]({{ site.eurl }}/public/img/6dwzl1.jpg){: .img-center .responsive-image }
 
 Para los sysadmins o personas que trabajamos en infraestructura web, los headers de un webserver nos dan información muy valiosa sobre la configuración y comportamiento de estos servidores porque tenemos acceso a información que nos permite interpretar muy bien dónde hacer mejoras, encontrar fallas, etc en la configuración de estos mismos webservers.
 
@@ -47,7 +46,7 @@ Tambien sabemos todos los que trabajamos y mantenemos sitios de alta perfomance 
 
 Y cuando de perfomance pura estamos hablando es donde entran en juego otras palabras mágicas tales como nginx, Varnish, squid, etc. Los cuales son ampliamente utilizados como [proxies reversos](http://en.wikipedia.org/wiki/Reverse_proxy) que a grandes rasgos es como esto:
 
-![Proxy reverso]({{ site.eurl }}/public/img/2juzbc.jpg)
+![Proxy reverso]({{ site.eurl }}/public/img/2juzbc.jpg){: .img-center .responsive-image }
 
 Pero vayamos al quid de la cuestión que es la configuración.
 
@@ -63,11 +62,11 @@ Veamos algunos casos:
 El sitio de Fravega fue uno de los que peor funcionó, en ningún momento del dia de las varias veces que intenté entrar estaba funcional.
 Analizemos el resultado de los headers de la página principal.
 
-![Fravega]({{ site.eurl }}/public/img/fravega.png)
+![Fravega]({{ site.eurl }}/public/img/fravega.png){: .img-center .responsive-image }
 
 O con Google Chrome por ejemplo al html principal.
 
-![Fravega haders]({{ site.eurl }}/public/img/2088l5s.jpg)
+![Fravega haders]({{ site.eurl }}/public/img/2088l5s.jpg){: .img-center .responsive-image }
 
 Lo que realmente nos interesa de la información que vemos alli es que sí, estan utilizando Varnish y consideran que eso es mas que suficiente para mantener el sitio online con la avalancha de usuarios que ha habido hoy cuando han ignorado olímpicamente lo que he remarcado en rojo que es el Cache-Control de http.
 Porqué digo que han desaprovechado el uso de Cache-Control…?
@@ -87,7 +86,7 @@ En el primer caso que mencioné a Varnish, es un ejemplo de contenido estático 
 
 En el segundo caso que es cachear el contenido “en” el browser del cliente, es allí donde entran en juego los headers http que mencioné mas arriba, porque manipulando cómo se debe/permite cachear este contenido estático (.jpg, .png, .gif, .js, .css, .fonts, etc) **uno puede hacer que la infraestructura de los clientes y de muchas empresa trabaje para nosotros SIN sobrecargar nuestro webserver + cache server**
 
-![Qué, cómo...?]({{ site.eurl }}/public/img/imgur_9CUtI.gif)
+![Qué, cómo...?]({{ site.eurl }}/public/img/imgur_9CUtI.gif){: .img-center .responsive-image }
 
 Veamos un ejemplo práctico con una imagen cualquiera alojada en este blog:
 
@@ -109,7 +108,7 @@ Utilizar todas estas herramientas que estan literalmente al alcance de los dedos
 Puedo decirles por experiencia que trabajando a la par de un equipo de buenos desarrolladores (escasean bastante) he sido capaz de publicar un sitio hecho en WordPress con picos de 90.000 visitas diarias con un server en Rackspace Cloud con 1gb de ram consumiendo un máximo de 700mb.
 Puede sonar increíble pero les aseguro que es perfectamente posible cuando lo que publicamos no tiene errores de de código y tenemos un memcache + APC trabajando a la par de una buena configuración de nginx.
 
-![Shut UP and take my money]({{ site.eurl }}/public/img/43477830.jpg)
+![Shut UP and take my money]({{ site.eurl }}/public/img/43477830.jpg){: .img-center .responsive-image }
 
 ## Nginx
 

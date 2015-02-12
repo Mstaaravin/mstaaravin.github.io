@@ -72,6 +72,15 @@ h1, h2, h3, h4, h5, h6 {
  * Center the page content.
  */
 
+/*
+* images centered
+*/
+.img-center 
+{
+    margin: 0 auto;
+    display: block;
+}
+ 
 .container {
   max-width: 28rem;
 }
@@ -85,6 +94,8 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 38rem;
   }
 }
+
+
 
 
 /*

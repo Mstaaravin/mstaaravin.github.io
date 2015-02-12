@@ -37,7 +37,7 @@ disqus: blogngencomar
 google_analytics: UA-37994253-2
 
 # Custom vars
-version:             1.1.0
+version:             1.2.0
 
 # Exclude Ruby gem stuff
 exclude:             ["vendor"]
