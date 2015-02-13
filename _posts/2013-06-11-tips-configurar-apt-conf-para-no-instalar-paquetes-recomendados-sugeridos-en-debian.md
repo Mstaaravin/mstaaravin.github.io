@@ -4,7 +4,7 @@ autor: Mstaaravin
 title: Configurar apt.conf para no instalar paquetes recomendados/sugeridos en Debian
 published: true
 tags: apt.conf
-category: Debian Tips
+category: [Debian, Tips]
 ---
 
 Despues de tantos años de utilizar Debian en servidores y Desktops he llegado a tener un checklist de tareas que cumplo a rajatabla cada vez que necesito hacer una nueva instalación.

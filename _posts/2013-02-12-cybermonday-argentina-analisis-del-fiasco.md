@@ -3,7 +3,7 @@ layout: post
 autor: Mstaaravin
 title: Cybermonday Argentina análisis del fiasco
 published: true
-category: Webservers
+category: [Webservers]
 tags: Cybermonday Nginx Varnish Apache
 ---
 

@@ -4,7 +4,7 @@ autor: Mstaaravin
 title: KVM Full backups de virtual disks (qcow2) con virsh + rsync
 published: true
 tags: libvirt rsync backup qcow2
-category: Virtualization
+category: [Virtualization]
 ---
 
 Cuando utilizamos KVM (qemu + libvirt) para virtualizar podemos utilizar diferentes métodos para los discos virtuales de las VMs (LVM, Raw, QCow2, etc) mi preferencia pasa por utilizar qcow2 como formato de disco virtual.
