@@ -79,7 +79,7 @@ Hay formas de aplicar el mismo tipo de seguridad con Apache+php-fpm pero prácti
 Algo que también se puede implementar para incrementar la seguridad de nginx y de las aplicaciones es utilizar naxsi un WAF (Web Application Firewall) similar a mod-security para Apache, algo que estoy implementando en este blog y testeando antes de ponerlo en producción en otros servers.
 
 ## Links de interés
-<http://php.net/manual/en/install.fpm.configuration.php>
-<http://www.cyberciti.biz/tips/php-security-best-practices-tutorial.html>
-<http://myjeeva.com/php-fpm-configuration-101.html>
+<http://php.net/manual/en/install.fpm.configuration.php>  
+<http://www.cyberciti.biz/tips/php-security-best-practices-tutorial.html>  
+<http://myjeeva.com/php-fpm-configuration-101.html>  
 <https://docs.newrelic.com/docs/php/per-directory-settings>
