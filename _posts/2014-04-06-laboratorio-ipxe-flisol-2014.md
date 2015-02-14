@@ -53,4 +53,4 @@ _tftp root='/home/tftp'_ Por supuesto es el root path donde tenemos todos los ar
 
 Probamos que funcione (no olvidar seleccionar PXE como primera opción de boot en virt-manager)
 
-{% youtube v3MiUHa1Fzw %}
+<iframe width="420" height="315" src="https://www.youtube.com/embed/v3MiUHa1Fzw" frameborder="0" allowfullscreen></iframe>
