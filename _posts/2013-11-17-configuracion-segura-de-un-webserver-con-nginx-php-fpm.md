@@ -4,7 +4,7 @@ autor: Mstaaravin
 title: Configuración segura de un webserver con nginx + php-fpm
 published: true
 tags: nginx php-fpm
-category: [Webservers]
+categories: Webservers
 ---
 
 Desde la semana pasada estoy como sysadmin freelance de una serie de webservers en una empresa de diseño que hostea los sitios webs de sus propios clientes.
