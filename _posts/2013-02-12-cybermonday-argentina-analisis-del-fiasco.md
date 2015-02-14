@@ -41,7 +41,7 @@ La información que podemos obtener nos permite tomar deciciones correctas en el
 
 ## Webservers
 
-Todo el que trabaja relaciondo con sitios de “alto” tráfico y me refiero por alto a mantener servidores con unas cuantas centenas de miles de visitas diarias conoce de términos como Proxys reversos, cache web, memcache, apc, etc. Todas estas son palabras de tecnologías relacionadas a nuestro trabajo y que nos facilitan el día a día.
+Todo el que trabaja relaciondo con sitios de “alto” tráfico y me refiero por alto a mantener servidores con unas cuantas centenas de miles de visitas diarias conoce de términos como Proxys reversos, cache web, memcache, apc, etc. Todas estas son palabras de tecnologías relacionadas a nuestro trabajo y que nos facilitan el día a día.  
 Tambien sabemos todos los que trabajamos y mantenemos sitios de alta perfomance que Apache (el webserver mas utilizado) realmente no es muy eficiente que digamos en manejar muchas peticiones simultáneas, en otras palabras explota por todos lados. Es casi 100% compatible con casi todo lo publicable vía web (excepto .NET) pero como decía no es el Oooooh de los webserver en lo que a perfomance refiere.
 
 Y cuando de perfomance pura estamos hablando es donde entran en juego otras palabras mágicas tales como nginx, Varnish, squid, etc. Los cuales son ampliamente utilizados como [proxies reversos](http://en.wikipedia.org/wiki/Reverse_proxy) que a grandes rasgos es como esto:
@@ -68,8 +68,8 @@ O con Google Chrome por ejemplo al html principal.
 
 ![Fravega haders]({{ site.eurl }}/public/img/2088l5s.jpg){: .img-center .responsive-image }
 
-Lo que realmente nos interesa de la información que vemos alli es que sí, estan utilizando Varnish y consideran que eso es mas que suficiente para mantener el sitio online con la avalancha de usuarios que ha habido hoy cuando han ignorado olímpicamente lo que he remarcado en rojo que es el Cache-Control de http.
-Porqué digo que han desaprovechado el uso de Cache-Control…?
+Lo que realmente nos interesa de la información que vemos alli es que sí, estan utilizando Varnish y consideran que eso es mas que suficiente para mantener el sitio online con la avalancha de usuarios que ha habido hoy cuando han ignorado olímpicamente lo que he remarcado en rojo que es el Cache-Control de http.  
+Porqué digo que han desaprovechado el uso de Cache-Control…?  
 Bueno, [aquí](http://www.mobify.com/blog/beginners-guide-to-http-cache-headers/) [aquí](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) y [aquí](http://en.wikipedia.org/wiki/List_of_HTTP_header_fields) tienen todos los detalles técnicos en profundidad.
 Pero puedo decirles que habilitando la cache del contenido estático uno puede forzar a los browsers de los clientes y a todo proxy de contenidos que haya entre el webserver y el browser del cliente a mantener una copia en cada uno de los intermediarios.
 

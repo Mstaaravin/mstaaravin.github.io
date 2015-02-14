@@ -15,7 +15,7 @@ Este post tiene como finalidad compartir uno de estos tips:
 
 Amo Debian… 
 
-Hago alarde de un verdadero derroche de satisfacción al utilizar Debian dia a dia pero no todo es color de rosas y como sabemos la perfección no existe.
+Hago alarde de un verdadero derroche de satisfacción al utilizar Debian dia a dia pero no todo es color de rosas y como sabemos la perfección no existe.  
 Y es verdad que tengo que darle la razón a amigos que cordial y salvajemente me recuerdan a la mínima posibilidad de lo poco optimizado que está implementado el sistema de dependencias en Debian (y derivados), no es ningún secreto que una instalación promedio instala muchas mas cosas de las necesarias y eso hasta a mí me molesta porque con el tiempo la cantidad de librerias innecesarias crece incesantemente y los updates/upgrades bajan cada vez mayor cantidad de paquetes.
 
 Por ese motivo incluso cuando instalo Debian desde cero en una notebook/desktop y siempre con el netinstaller, nunca jamás selecciono la opción “Desktop Environment”, sino que sólo dejo tildada la opción “Standard System Utilities”

@@ -7,13 +7,13 @@ tags: nginx php-fpm
 category: [Webservers]
 ---
 
-Desde la semana pasada estoy como sysadmin freelance de una serie de webservers de una empresa de diseño que hostea los sitios webs de sus propios clientes.
+Desde la semana pasada estoy como sysadmin freelance de una serie de webservers en una empresa de diseño que hostea los sitios webs de sus propios clientes.
 
 El objetivo es actualizar, optimizar y asegurar esos pocos webservers (menos de 10) y justo cuando tomé el control de los mismos me estreno con un deface a TODOS los sitios de varios de ellos apareciendo una portada como la siguiente:
 
 ![](/public/img/defaced1.jpg){: .img-center .responsive-image }
 
-Por supuesto, se fue al garete todo el plan de upgrades que tenia pensado y tuve que ponerme a trabajar contrareloj para solventar este inconveniente y permitir que los sitios esten nuevamente online.
+Por supuesto, se fue al garete todo el plan de upgrades que tenia pensado y tuve que ponerme a trabajar contrareloj para solventar este inconveniente y permitir que los sitios esten nuevamente online.  
 En un principio sólo restauré archivos borrados y databases y los sitios volvieron a estar online pero a las pocas horas nuevamente volvieron a comprometer los sitios asi que había una cuestión de fondo que resolver.
 
 > Para el ejemplo sólo usaré dominios bajo mi control para mantener en privado los reales sobre los que realizé el trabajo
@@ -23,8 +23,8 @@ En la GRAN mayoría de los casos cuando nos encontramos con sitios defaced, la c
 Este caso no fue la excepción por lo que nada podía hacer si la propia empresa no actualizaba esos WordPress & Joomla (la mayoría) que estaban siendo vulnerados a cada momento.
 Por lo que tuve que implementar una solución para al menos mitigar estas vulnerabilidades y en el caso de que comprometan un sitio, no puedan acceder a los demás.
 
-Esto último lo explico de esta forma:
-Por defecto (incluso yo mismo he hecho esto en el pasado) la mayoría de los webservers con apache+php o nginx+php tienen definido en el php.ini una variable open_basedir que en el caso de los servidores Debian es /var/www esto hace que si logran comprometer un sitio y NO estan deshabilitadas las funciones exec,passthru,shell_exec,eval,system los defacers pueden ganar acceso a otros directorios donde se alojen otros sitios y poder comprometerlos sin necesidad de que esos otros sitios tengan vulnerabilidades php, sql injections, etc.
+Esto último lo explico de esta forma:  
+Por defecto (incluso yo mismo he hecho esto en el pasado) la mayoría de los webservers con apache+php o nginx+php tienen definido en el php.ini una variable open_basedir que en el caso de los servidores Debian es /var/www esto hace que si logran comprometer un sitio y NO estan deshabilitadas las funciones exec,passthru,shell_exec,eval,system los defacers pueden ganar acceso a otros directorios donde se alojen otros sitios y poder comprometerlos sin necesidad de que esos otros sitios tengan vulnerabilidades php, sql injections, etc.  
 Se entiende entonces la importancia de definir correctamente variables y funciones en la configuración de PHP para aumentar las chances en la seguridad de un sitio.
 
 Lo primero fue dar de baja Apache+PHP e instalar nginx+php-fpm, los servidores son Debian Squeeze por lo que tuve que instalar todos los paquetes desde los repositorios de 
@@ -71,7 +71,7 @@ Es importante definir en los pools valores de php distintos a los que hay en **/
 
 > Tambien es **MUY** importante el valor “open_basedir” porque en combinación con el “chroot” del propio php-fpm aísla el acceso de la aplicación php a solamente el path que definamos, en el ejemplo /var/www/blog.ngen.com.ar y no se permite que los scripts php puedan escalar directorios.
 
-Con estos simples pasos pude aislar exitosamente los distintos sitios de los servers, en todos los casos excepto en 1 pude evitar que los sitios se vuelvan a ser comprometidos, ademas tuve que probar y flexibilizar bastante los valores definidos en “disabled_functions” para que otros sitios funcionaran correctamente, eso depende de cada caso en particular.
+Con estos simples pasos pude aislar exitosamente los distintos sitios de los servers, en todos los casos excepto en 1 pude evitar que los sitios se vuelvan a ser comprometidos, ademas tuve que probar y flexibilizar bastante los valores definidos en “disabled_functions” para que otros sitios funcionaran correctamente, eso depende de cada caso en particular.  
 Por lo menos en el caso del único sitio que quedó vulnerable (Joomla 1.1) y volvía a ser comprometido una y otra vez no afectó el normal funcionamiento de los demás, y en cuestión de dias fue actualizado y no presentó mas problemas.
 
 Hay formas de aplicar el mismo tipo de seguridad con Apache+php-fpm pero prácticamente no utilizo Apache asi que no sé cómo hacerlo.
