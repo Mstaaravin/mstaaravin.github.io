@@ -30,15 +30,15 @@ debemos cambiar entonces el comportamiento modificando algunos valores.
 
 He aqui un ejemplo típico (**las IPs son ficticias**)  
 
-{% gists d5efd0761c3811ad0c83 %}
+{% gist d5efd0761c3811ad0c83 %}
 
 Utilizando iproute cambiamos el valor inet a “manual” quedando como el ejemplo que sigue.
 
-{% gists c02f75f0367efa0406bf %}
+{% gist c02f75f0367efa0406bf %}
 
 Para confirmar que las IPs esta correctamente configuradas, iproute nos provee con el comando “ip” para verificarlo
 
-{% gists e77ebdd7829108a24c3e %}
+{% gist e77ebdd7829108a24c3e %}
 
 
 Eso es todo, posteriormente se puede agregar a las lineas de /etc/network/interfaces todo lo que necesitemos aplicar con iproute (rutas extras, traffic shapping, etc)

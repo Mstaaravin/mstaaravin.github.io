@@ -24,7 +24,7 @@ Por default cuando utilizamos KVM tenemos disponible una red “default”
 
 Que podemos ver con mas detalles en virt-manager
 
-![](/public/img/lhome-Connection-Details_001-500x390.png){: .img-center .responsive-image }
+![](/public/img/lhome-Connection-Details_001-500x390.png){: .img-center .responsive-image width="500px"}
 
 El objetivo de este post no es explicar todo lo relacionado a la configuración de red que utiliza libvirt, sino modificar la red x default para que nos permita tener booteo PXE en esa red virtual.
 
