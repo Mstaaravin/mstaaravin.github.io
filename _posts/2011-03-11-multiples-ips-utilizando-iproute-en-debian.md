@@ -23,6 +23,13 @@ Tengo hasta el momento 4 interfaces físicas en mi server
  * eth2=lan
  * eth3=dmz
 
+Como por el momento tengo solamente 1 ISP, y estoy utilizando al menos 3 IPs públicas del pool disponible y en el futuro inmediato necesito:
+
+ * balanceo de carga
+ * Wan failover
+ * traffic shapping
+ * múltilples rutas entre la (dmz, openvpn, lan, internet, etc)
+
 La solución es integrar iproute con la estructura de networking en Debian.  
 
 Debian utiliza el archivo /etc/network/interfaces para definir el estado de las interfaces y sus IPs, en este caso en particular definimos las IPs utilizando iproute,
