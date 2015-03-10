@@ -37,7 +37,15 @@ debemos cambiar entonces el comportamiento modificando algunos valores.
 
 He aqui un ejemplo típico (**las IPs son ficticias**)  
 
-{% gist d5efd0761c3811ad0c83 %}
+{% highlight console %}
+auto eth0
+iface eth0 inet static
+        address 190.139.257.1
+        netmask 255.255.255.240
+        network 190.139.257.0
+        broadcast 190.139.257.15
+        gateway 190.139.257.14
+{% endhighlight %}
 
 Utilizando iproute cambiamos el valor inet a “manual” quedando como el ejemplo que sigue.
 
