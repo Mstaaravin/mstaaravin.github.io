@@ -22,13 +22,13 @@ paginate:            5
 
 # About/contact
 author:
-  name:              Carlos Miranda (Mstaaravin) 
+  name:              Carlos Miranda (Mstaaravin)
   url:               https://twitter.com/mstaaravin
   email:             mstaaravin@gmail.com
-  github:            Mstaaravin
-  twitter:           Mstaaravin
-  linkedin:			 cmngen
-#  rss:				 yes
+  github:     Mstaaravin
+  twitter:      Mstaaravin
+  linkedin:     cmngen
+#  rss:     yes
 
 #Your disqus shortname, entering this will enable commenting on posts
 disqus: blogngencomar
@@ -43,7 +43,7 @@ version:             1.2.0
 exclude:             ["vendor"]
 
 jekyll-mentions: https://twitter.com
-  
+
 # Gems
 gems:
   - jekyll-redirect-from
