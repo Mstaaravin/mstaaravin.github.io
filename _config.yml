@@ -49,3 +49,4 @@ gems:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-mentions
+theme: jekyll-theme-hacker
